@@ -1,0 +1,42 @@
+/* .floating-image {
+    position: absolute;
+    width: 60px;
+    opacity: 0.15;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+  
+  .floating-image-1 {
+    top: 10%;
+    left: 5%;
+    animation-name: floatUpDown;
+    animation-duration: 6s;
+  }
+  
+  .floating-image-2 {
+    top: 30%;
+    left: 80%;
+    animation-name: floatLeftRight;
+    animation-duration: 8s;
+  }
+  
+  .floating-image-3 {
+    top: 60%;
+    left: 40%;
+    animation-name: floatUpDown;
+    animation-duration: 7s;
+  }
+  
+  @keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+  }
+  @keyframes floatLeftRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+  }
+   */

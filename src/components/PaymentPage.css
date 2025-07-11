@@ -1,0 +1,203 @@
+/* PaymentPage.css */
+ 
+.payment-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-method-group {
+background: #ffffff;
+border: 2px solid #e0e0e0;
+border-radius: 12px;
+padding: 1.25rem;
+margin-bottom: 1rem;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.payment-method-group:hover {
+border-color: #E94B3C;
+box-shadow: 0 4px 12px rgba(233, 75, 60, 0.1);
+transform: translateY(-2px);
+}
+
+.payment-method-group.active {
+border-color: #E94B3C;
+background-color: #fff8f7;
+box-shadow: 0 4px 12px rgba(233, 75, 60, 0.15);
+}
+ 
+.payment-method-label-row {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+user-select: none;
+position: relative;
+}
+ 
+.payment-method-label {
+font-size: 1.1rem;
+font-weight: 500;
+margin: 0;
+flex-grow: 1;
+color: #333;
+padding-left: 0.5rem;
+}
+ 
+/* Hide default Bootstrap radio button */
+.payment-method-radio {
+position: absolute;
+opacity: 0;
+width: 0;
+height: 0;
+margin: 0;
+}
+
+/* Custom radio button container */
+.payment-method-radio + label::before {
+content: '';
+display: inline-block;
+width: 1.25rem;
+height: 1.25rem;
+border: 2px solid #e0e0e0;
+border-radius: 50%;
+margin-right: 0.5rem;
+vertical-align: middle;
+cursor: pointer;
+transition: all 0.2s ease;
+background-color: #fff;
+}
+
+/* Hover state */
+.payment-method-radio:hover + label::before {
+border-color: #E94B3C;
+}
+
+/* Checked state */
+.payment-method-radio:checked + label::before {
+border-color: #E94B3C;
+}
+
+/* Inner circle for checked state */
+.payment-method-radio:checked + label::after {
+content: '';
+position: absolute;
+left: 0.375rem;
+top: 50%;
+transform: translateY(-50%);
+width: 0.75rem;
+height: 0.75rem;
+background-color: #E94B3C;
+border-radius: 50%;
+}
+
+/* UPI special styling */
+#upi.payment-method-radio:checked + label::before {
+border-color: black;
+}
+
+#upi.payment-method-radio:checked + label::after {
+background-color: black;
+}
+ 
+.expandable-form {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e0e0e0;
+  animation: slideDown 0.3s ease-out;
+}
+ 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+.form-control-lg {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+ 
+.form-control-lg:focus {
+  border-color: #E94B3C;
+  box-shadow: 0 0 0 0.25rem rgba(233, 75, 60, 0.15);
+}
+ 
+.form-label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+ 
+.pay-btn {
+  background-color: #E94B3C !important;
+  border-color: #E94B3C !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+ 
+.pay-btn:not(:disabled):hover {
+  background-color: #d63a2c !important;
+  border-color: #d63a2c !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 75, 60, 0.2);
+}
+ 
+.pay-btn:disabled {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+ 
+.alert {
+  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+ 
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+ 
+.d-flex.gap-3 {
+  gap: 18px !important;
+}
+ 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment-container {
+    padding: 1rem;
+  }
+
+  .payment-method-group {
+    padding: 1rem;
+  }
+
+  .payment-method-label {
+    font-size: 1rem;
+  }
+
+  .form-control-lg {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .pay-btn {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}

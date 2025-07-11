@@ -1,0 +1,158 @@
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80')
+                center center/cover no-repeat;
+    padding-top: 80px;
+    color: white;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+ 
+  .hero-section {
+    height: 100vh;
+    padding-top: 80px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section.enhanced-hero {
+    height: 100vh;
+    background: #0b0c10;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Neon glowing text with 3D shadow */
+  .neon-text {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ff416c;
+    text-shadow:
+      0 0 5px #ff416c,
+      0 0 10px #ff416c,
+      0 0 20px #ff416c,
+      0 0 40px #ff4b2b,
+      0 0 80px #ff4b2b;
+    margin-bottom: 1rem;
+  }
+  
+  /* Shimmer effect on text */
+  @keyframes shimmer {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
+  .shimmer-text {
+    background: linear-gradient(270deg, #ff416c, #ff4b2b, #ff416c);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Shimmer button */
+  .shimmer-btn {
+    background: linear-gradient(270deg, #ff416c, #ff4b2b, #ff416c);
+    background-size: 200% 100%;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    transition: background-position 0.8s ease, transform 0.3s ease;
+    box-shadow: 0 0 15px #ff416c;
+    animation: shimmer 3s linear infinite;
+  }
+  
+  .shimmer-btn:hover {
+    background-position: 100% 0;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #ff4b2b;
+  }
+  
+  /* Floating SVG icons with rotation and subtle scale */
+  .floating-svg {
+    position: absolute;
+    opacity: 0.25;
+    animation: floatRotateScale 8s ease-in-out infinite;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  .floating-svg-1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .floating-svg-2 {
+    top: 40%;
+    right: 20%;
+    animation-delay: 3s;
+  }
+  
+  .floating-svg-3 {
+    bottom: 25%;
+    left: 30%;
+    animation-delay: 5s;
+  }
+  
+  @keyframes floatRotateScale {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translateY(-15px) rotate(15deg) scale(1.05);
+    }
+  }
+  
+  /* Bokeh background effect */
+  .bokeh-bg {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255, 75, 43, 0.25), transparent 40%),
+      radial-gradient(circle at 70% 70%, rgba(255, 65, 108, 0.3), transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255, 75, 43, 0.15), transparent 60%);
+    filter: blur(70px);
+    animation: bokehMove 25s linear infinite alternate;
+    z-index: 1;
+  }
+  
+  @keyframes bokehMove {
+    0% {
+      background-position: 20% 30%, 70% 70%, 50% 50%;
+    }
+    100% {
+      background-position: 25% 35%, 75% 75%, 55% 55%;
+    }
+  }
+  .rotating-text {
+    border-bottom: 2px solid #ff4b2b;
+    padding-bottom: 4px;
+    font-weight: 700;
+    color: #ff4b2b;
+  }
